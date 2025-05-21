@@ -13,7 +13,7 @@ A Python-powered automation tool that generates SEO-optimized metadata (titles +
 * ✅ Uses **OpenAI GPT-4o-mini** for high-quality metadata
 * ✅ Describe image title with filename
 * ✅ Embeds metadata back into images using EXIF/IPTC
-* ✅ Supports **batch processing** and **single image mode**
+* ✅ Supports **multi processing** and **single image mode**
 * ✅ Exports metadata to CSV for bulk uploads (e.g., Adobe Stock)
 * ✅ Modular and extensible architecture
 
