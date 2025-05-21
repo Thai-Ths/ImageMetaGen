@@ -11,6 +11,7 @@ A Python-powered automation tool that generates SEO-optimized metadata (titles +
 
 * ✅ Auto-generates **SEO-friendly titles** and **visually relevant keywords**
 * ✅ Uses **OpenAI GPT-4o-mini** for high-quality metadata
+* ✅ Describe image title with filename
 * ✅ Embeds metadata back into images using EXIF/IPTC
 * ✅ Supports **batch processing** and **single image mode**
 * ✅ Exports metadata to CSV for bulk uploads (e.g., Adobe Stock)
@@ -23,7 +24,7 @@ A Python-powered automation tool that generates SEO-optimized metadata (titles +
 ```
 project/
 │
-├── agents.py                # Base Agent + Runner wrapper
+├── app.py                   # Gradio app
 ├── metadata_agent.py        # Logic for metadata generation using LLM
 ├── image_manager.py         # Utilities for image loading, resizing, base64 encoding
 ├── embedded.py              # Embeds metadata into image files
@@ -85,7 +86,7 @@ Processes multiple images in batches (default: 3 per batch):
 python app.py
 ```
 
-You can customize batch size, max keywords, etc., via `CLI`.
+You can customize max title leangth, max keywords, etc., via `Gradio Interface`.
 
 ---
 
