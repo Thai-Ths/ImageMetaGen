@@ -1,10 +1,9 @@
 # Image-Metadata-Generate
-![image](https://github.com/user-attachments/assets/60e79742-ce71-4f20-a9c6-8c8fe2e16dd9)
 
 # 🏷️ Adobe Stock Metadata Generator
 
 A Python-powered automation tool that generates SEO-optimized metadata (titles + keywords) for stock images using OpenAI's GPT models. It also embeds the generated metadata directly into image files and exports a summary to CSV.
-
+![image](https://github.com/user-attachments/assets/60e79742-ce71-4f20-a9c6-8c8fe2e16dd9)
 ---
 
 ## 📦 Features
