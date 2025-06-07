@@ -107,34 +107,3 @@ async def process_images(
 
     return gallery_items, csv_output
 
-async def process_single_image(
-    image_path: str,
-    use_filename: bool = False
-    ) -> None:
-    agent = MetadataAgent(
-        model=ProcessingConfig.MODEL_NAME,
-        max_title_length=ProcessingConfig.MAX_TITLE_LENGTH,
-        max_keywords=ProcessingConfig.MAX_KEYWORDS
-    )
-    try:
-        image_data = ImageManager.process_single_image(
-            image_path,
-            size=ProcessingConfig.IMAGE_SIZE
-        )
-        metadata = await agent.process_image(
-            filename=image_data['filename'],
-            image_b64=image_data['image_b64'],
-            use_filename=use_filename
-        )
-        if metadata:
-            embed_metadata(
-                metadata_list=[metadata],
-                image_folder=os.path.dirname(image_path),
-                output_csv=f"{os.path.splitext(image_path)[0]}_metadata.csv"
-            )
-            print(f"Successfully processed {image_path}")
-        else:
-            print(f"Failed to generate metadata for {image_path}")
-    except Exception as e:
-        print(f"Error processing {image_path}: {e}")
-
